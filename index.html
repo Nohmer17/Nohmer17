@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Interface</title>
+
+    <style>
+        body {
+            margin: 0px;
+            font-family: Helvetica;
+        }
+        header {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 1em;
+        }
+
+        header h1 {
+            background: linear-gradient(to right, #000000, #ffffff);
+            background-clip: text;
+            color: transparent;
+            font-size: 50px;
+        }
+
+        header p {
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: rgb(39, 39, 39);
+        }
+
+        nav li {
+            float: left;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 500px 1fr;
+        }
+
+        .images {
+            height: 80%;
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #C08552;
+        }
+
+        .about-me, .description {
+            background-color: #800080;
+            padding: 1em;
+        }
+
+        /* PHONE */
+        @media screen and (max-width: 530px) {
+            header h1 {
+                font-size: 35px;
+            }
+            
+            .quote {
+                padding: 0;
+                font-size: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            main {
+                display: block;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-me p, .description p{
+            font-size: 12px;
+            }
+        }
+
+        /* TABLET */
+        @media screen and (max-width: 726px) {
+            header p {
+                padding-left: 1em;
+                padding-right: 1em;
+                font-size: 16px;
+            }
+
+            main {
+                grid-template-columns: auto auto;
+            }
+
+            .images {
+                height: 60%;
+            }
+
+            .about-me p, .description p{
+            font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Nohmer's Website</h1>
+            <p  class="quote">"Its not a bad <strong>Life</strong>, its just a bad <strong>Day</strong>."</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Me</a></li>
+            <li><a href="">Description</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="about-me">
+            <h4>About Me</h4>
+            <p>Hi, I'm Numeriano E. Edrad Jr., I'm a 2nd year college student pursuing Bachelor Of Science In Information Technologies at Dalubhasaan ng Lungsod ng Lucena. I'm a passionate developer interested in web technologie.</p>
+            <img src="Nohmer.jpg" alt="photo of me" class="images">
+        </div>
+    
+        <div class="description">
+            <h4>Me and my Special one at Bukid Amara</h4>
+            <p>This is the picture of my special one. <br> 02-20-2024</p>
+            <img src="My-Love-One.jpg" alt="photo" class="images">
+        </div>
+    </main>
+</body>
+</html>
